@@ -34,8 +34,8 @@ function UpdatePost() {
     };
     return (
         <>
-            <div className="container">
-                <h1>Formulário para Editar o Post</h1>
+            <div className="container shadow-sm">
+                <h1 className="mb-4" style={{fontWeight:700, letterSpacing:"1px"}}>Formulário para Editar o Post</h1>
                 <form>
                     <div className="mb-3 mt-3">
                         <label className="form-label"> Titulo:</label>

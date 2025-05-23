@@ -14,12 +14,16 @@ const ReadTema = () => {
             }).catch(err => console.log(err))
     }, [id]);
     return (
-        <div className="container">
+        <div className="container shadow-sm">
             <div className='row'>
                 <div className='col-md-12'>
-                    <h1>Detalhes do Tema</h1>
-                    <table className="table">
-                        <thead>
+                    <h1 className="mb-4" style={{fontWeight:700, letterSpacing:"1px"}}>Detalhes do Tema</h1>
+                    <table className="table table-dark" style={{
+                        borderRadius: "1rem",
+                        overflow: "hidden",
+                        borderColor: "#444"
+                    }}>
+                        <thead style={{background: "#00b894", color: "#fff"}}>
                             <tr>
                                 <th>Descrição</th>
                                 <th>Data de Criação</th>

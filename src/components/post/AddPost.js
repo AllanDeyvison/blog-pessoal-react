@@ -35,8 +35,8 @@ const AddPostagem = () => {
 
 
     return (
-        <div className="container">
-            <h2 className='w-100 d-flex justify-content-center p-3'>Adicionando
+        <div className="container shadow-sm">
+            <h2 className='w-100 d-flex justify-content-center p-3 mb-4' style={{fontWeight:700, letterSpacing:"1px"}}>Adicionando
                 Postagem</h2>
             <div className='row'>
                 <div className='col-md-12'>

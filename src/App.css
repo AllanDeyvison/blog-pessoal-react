@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background: #181a1b;
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -14,18 +16,20 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #181a1b;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #e0e0e0;
+  padding-top: 2rem;
 }
 
 .App-link {
-  color: #61dafb;
+  color: #8ab4f8;
+  text-decoration: underline;
 }
 
 @keyframes App-logo-spin {
@@ -36,12 +40,129 @@
     transform: rotate(360deg);
   }
 }
-/* ListPost.css */
+
+/* Minimalist dark table styles */
 .table-dark {
-  background-color: #000 !important;
-  color: #fff;
+  background-color: #23272a !important;
+  color: #e0e0e0;
+  border: none;
 }
 .table-dark th, .table-dark td {
-  background-color: #000 !important;
+  background-color: #23272a !important;
+  color: #e0e0e0;
+  border: none;
+}
+.table th, .table td {
+  vertical-align: middle !important;
+  border-top: 1px solid #2c2f33 !important;
+}
+.table thead th {
+  border-bottom: 2px solid #444 !important;
+  background: #23272a !important;
   color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Buttons */
+.btn {
+  border-radius: 0.3rem !important;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  border: none !important;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-primary {
+  background: #444950 !important;
+  color: #fff !important;
+}
+.btn-primary:hover {
+  background: #222 !important;
+  color: #fff !important;
+}
+.btn-success {
+  background: #3a3d40 !important;
+  color: #b8ffec !important;
+}
+.btn-success:hover {
+  background: #222 !important;
+  color: #b8ffec !important;
+}
+.btn-info {
+  background: #23272a !important;
+  color: #8ab4f8 !important;
+}
+.btn-info:hover {
+  background: #181a1b !important;
+  color: #8ab4f8 !important;
+}
+.btn-danger {
+  background: #2d2323 !important;
+  color: #ffb4b4 !important;
+}
+.btn-danger:hover {
+  background: #181a1b !important;
+  color: #ffb4b4 !important;
+}
+
+/* Forms */
+.form-control, .form-select, select {
+  background: #23272a !important;
+  color: #e0e0e0 !important;
+  border: 1px solid #444 !important;
+  border-radius: 0.3rem !important;
+}
+.form-label {
+  color: #b0b0b0 !important;
+  font-weight: 500;
+}
+
+/* Links */
+a, .App-link {
+  color: #8ab4f8;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover, .App-link:hover {
+  color: #b8ffec;
+  text-decoration: underline;
+}
+
+/* Container and spacing */
+.container {
+  background: #23272a;
+  border-radius: 1rem;
+  box-shadow: 0 2px 16px #000a;
+  padding: 2rem 2.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+h1, h2, h4 {
+  color: #e0e0e0;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+hr {
+  border-color: #444;
+}
+
+/* Minimalist scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  background: #181a1b;
+}
+::-webkit-scrollbar-thumb {
+  background: #23272a;
+  border-radius: 4px;
+}
+
+/* Remove Bootstrap's default background for body */
+body {
+  background: #181a1b !important;
+}
+
+/* Remove focus outline for buttons */
+.btn:focus, .form-control:focus, .form-select:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 2px #44495055 !important;
 }

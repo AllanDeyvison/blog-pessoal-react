@@ -28,15 +28,19 @@ const ListTema = () => {
         }
     };
     return (
-        <div className="container">
-            <h2 className='w-100 d-flex justify-content-center p-3'>Listando
+        <div className="container shadow-sm">
+            <h2 className='w-100 d-flex justify-content-center p-3 mb-4' style={{fontWeight:700, letterSpacing:"1px"}}>Listando
                 Tema</h2>
             <div className='row'>
                 <div className='col-md-12'>
                     <p><Link to="/post" className="btn btn-primary m-1">Lista de Posts</Link></p>
                     <p><Link to="/addTema" className="btn btn-success">Adicionar novo Tema</Link></p>
-                    <table className="table table-bordered table-dark">
-                        <thead>
+                    <table className="table table-bordered table-dark" style={{
+                        borderRadius: "1rem",
+                        overflow: "hidden",
+                        borderColor: "#444"
+                    }}>
+                        <thead style={{background: "#6c5ce7"}}>
                             <tr>
                                 <th>ID</th>
                                 <th>Título</th>
@@ -49,7 +53,6 @@ const ListTema = () => {
                                     <tr>
                                         <td>{tema.idTema} </td>
                                         <td>{tema.descricao} </td>
-
                                         <td>
                                             <Link
                                                 to={`/readTema/${tema.idTema}`}

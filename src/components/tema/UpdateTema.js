@@ -33,8 +33,8 @@ function UpdateTema() {
     };
     return (
         <>
-            <div className="container">
-                <h1>Formulário para Editar o Tema</h1>
+            <div className="container shadow-sm">
+                <h1 className="mb-4" style={{fontWeight:700, letterSpacing:"1px"}}>Formulário para Editar o Tema</h1>
                 <form>
                     <div className="mb-3 mt-3">
                         <label className="form-label"> Descrição:</label>
