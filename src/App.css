@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+/* ListPost.css */
+.table-dark {
+  background-color: #000 !important;
+  color: #fff;
+}
+.table-dark th, .table-dark td {
+  background-color: #000 !important;
+  color: #fff;
+}

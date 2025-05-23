@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# Blog Pessoal React - Documentação do Projeto
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Visão Geral
 
-## Available Scripts
+Este projeto é um blog pessoal desenvolvido em React, consumindo uma API RESTful para gerenciar postagens e temas. O sistema permite criar, listar, editar, visualizar e deletar posts e temas.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Passo a Passo da Criação da API
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Configuração do Backend (API)**
+   - Utilização de Node.js com Express para criar a API.
+   - Configuração do banco de dados relacional  MySQL.
+   - Criação das tabelas `tema` e `postagem` com relacionamento (chave estrangeira).
+   - Implementação das rotas REST:
+     - `GET /tema` - Lista todos os temas.
+     - `GET /tema/:id` - Detalha um tema.
+     - `POST /tema` - Cria um novo tema.
+     - `PUT /tema/:id` - Atualiza um tema existente.
+     - `DELETE /tema/:id` - Remove um tema.
+     - `GET /posts` - Lista todas as postagens.
+     - `GET /posts/:id` - Detalha uma postagem.
+     - `POST /posts` - Cria uma nova postagem.
+     - `PUT /posts/:id` - Atualiza uma postagem existente.
+     - `DELETE /posts/:id` - Remove uma postagem.
+   - Implementação do CORS para permitir requisições do frontend.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. **Testes da API**
+   - Testes das rotas utilizando o Postman 
+   - Validação dos dados enviados e recebidos.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Principais Características do Projeto React
 
-### `npm run build`
+- **Estrutura de Componentes**
+  - Separação dos componentes por domínio: `post` e `tema`.
+  - Componentes para CRUD completo de posts e temas.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Integração com a API**
+  - Utilização do Axios para requisições HTTP.
+  - Consumo das rotas da API para listar, criar, editar e deletar dados.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Navegação**
+  - Uso do React Router DOM para navegação entre páginas.
+  - Rotas para cada operação (listar, adicionar, editar, visualizar).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Estilização**
+  - Uso do Bootstrap para estilização dos componentes e tabelas.
 
-### `npm run eject`
+- **Boas Práticas**
+  - Utilização de hooks (`useState`, `useEffect`, `useNavigate`, `useParams`).
+  - Separação de responsabilidades entre componentes.
+  - Feedback visual para o usuário após operações.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Como Executar o Projeto
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. **Backend**
+   - Instale as dependências e execute o servidor da API (Node.js/Express).
+   - Certifique-se de que o banco de dados está configurado e rodando.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+2. **Frontend**
+   - Instale as dependências com `npm install`.
+   - Execute o projeto com `npm start`.
+   - Acesse `http://localhost:3000` no navegador.
